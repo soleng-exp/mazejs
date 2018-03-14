@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        html, body, #renderCanvas, #main {
+            padding:0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
     <canvas id="main"></canvas>
+    <canvas id="renderCanvas"></canvas>
 </div>
 </body>
 <script src="dist/main.bundle.js"></script>

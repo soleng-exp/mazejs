@@ -311,6 +311,8 @@ class MazeFabric {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fab_MazeFabric__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fab/MazeFabric */ "./src/fab/MazeFabric.ts");
+/* harmony import */ var _Engine_Engine__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Engine/Engine */ "./src/Engine/Engine.ts");
+
 
 function main() {
     let fab = new _fab_MazeFabric__WEBPACK_IMPORTED_MODULE_0__["default"]();
@@ -318,6 +320,10 @@ function main() {
     env.load(fab);
     env.loadPerson(fab);
     env.run();
+    let engine = new _Engine_Engine__WEBPACK_IMPORTED_MODULE_1__["default"]();
+    engine.env = env;
+    engine.init();
+    engine.draw();
 }
 main();
 
