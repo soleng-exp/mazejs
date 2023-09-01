@@ -1,12 +1,16 @@
 {
   "scripts": {
-    "build": "webpack --mode development"
+    "build": "webpack --mode development",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "babylonjs": "^3.2.0-alphaC",
     "ts-loader": "^4.0.1",
     "typescript": "^2.7.2",
     "uglifyjs-webpack-plugin": "^1.2.3",
-    "webpack": "^4.1.1"
-  }
+    "webpack": "^4.1.1",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
